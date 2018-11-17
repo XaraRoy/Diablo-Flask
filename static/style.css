@@ -1,0 +1,182 @@
+
+
+#diablo{  background-color: black;
+	font-family: "diablo_h";
+	}
+
+@font-face {
+	font-family: "diablo_h";
+	src: url("diablo_h.ttf");
+	}
+#time_header {
+    margin-left: 48vw;
+}
+#skullcloud {
+            height: 75vh;
+            width: 66vw;    
+            scale: 6;
+            overflow: hidden;
+            z-index: 1;
+}
+
+
+.slidecontainer {
+    margin-top: 4vh;
+    z-index: 2;
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    position: static;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: rgb(112, 47, 47); /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}       
+
+
+
+.orb_container {
+	font-family: "diablo_h"
+    margin-bottom: 15vh;
+};
+
+.top_orb_container{
+	font-family: "diablo_h"
+    width: 30vh;
+    height: 30vh;
+}
+#pos_circle {
+    margin-left: 2vw;
+    margin-top: 3vh;
+    position: static;
+    background:green;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+
+    float: left;
+    z-index: 2;
+}
+
+#pos_circle {
+    position: static;
+    float: right;
+    background:red;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#comp_circle {
+    position: static;
+    float: right;
+    background:yellow;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    
+    z-index: 1;
+    margin-left: 2vh;
+    visibility: hidden;
+
+    display:none;
+}
+
+
+#neg_circle {
+       
+    margin-right: 2vw;
+
+    margin-top: 3vh;
+    position: static;
+    float: right;
+    background:green;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#neu_circle {
+    position: static;
+    float: right;
+    background:purple;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    
+    z-index: 1;
+    margin-right: 2vh;
+    visibility: hidden;
+
+    display:none;
+}
+
+
+#neu_mask {
+  
+    position: absolute;
+    background-color: black;
+    width: 200px;
+
+    z-index: 2;
+
+
+ }
+
+#comp_mask {
+
+    position: absolute;
+    background-color: black;
+    width: 200px;
+
+    z-index: 2;
+
+
+}
+
+
+#neg_mask {
+  
+    position: absolute;
+    background-color: black;
+    width: 200px;
+
+    z-index: 2;
+
+
+ }
+ 
+#pos_mask {
+
+    position: absolute;
+    background-color: black;
+    width: 200px;
+
+    z-index: 2;
+
+
+}
+
+
+#pos_gargoyle {z-index: 3;
+            width:200px;}
+
+
+
+
+#orbheading {z-index: 1;}

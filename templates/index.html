@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Diablo 3 Forum Clouds</title>
+    <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href= "{{url_for('static', filename='style.css')}}">
+</head>
+
+<body id="diablo">
+    <div class="container">
+
+        <div class="slidecontainer"></div>
+            <input type="range" min="1" max="87" class="slider" id="myRange" value={{slider}} >
+
+            </div>
+        </div>
+        <div class="row">
+            <h1 id='time_header'>{{date}}</h1>
+        </div>
+  
+        
+
+
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2">
+            <div class=top_orb_container id=comp_container style="margin-bottom: 40vh;">
+                    <h2 class="orbheading">Composite</h2>
+                    <div id="comp_circle">
+                    <div id="comp_mask" style="position: relative;  height: 1">
+    
+                    <p>{{neu}}</p>
+            </div></div></div>
+
+
+            <div class='orb_container', id=pos_container>
+                <h2 class="orbheading">Positivity</h2>
+                <div id="pos_circle">
+
+    
+                <img id="pos_gargoyle" src="images/Gargolye.png">
+                <div id="pos_mask" style="position: relative; bottom: 4vh; height: calc(20vh - 100vh *{{pos}}" >      
+                        <p>{{pos}}</p>
+              
+               
+                </div></div></div></div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+              
+        <img id='skullcloud' class='wordcloud' src={{url_for('static', filename='images/loadingcloud.png')}}>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2">
+        <div class=top_orb_container id=neu_container style="margin-bottom: 40vh;">
+                <h2 class="orbheading">Neutrality</h2>
+                <div id="neu_circle">
+                <div id="neu_mask" style="position: relative;  height: 1">
+
+                <p>{{neu}}</p>
+        </div></div></div></div>
+        
+
+            <div class=orb_container id=neg_container>
+                <h2 class="orbheading">Negativity</h2>
+                <div id="neg_circle">
+                <div id="neg_mask" style="position: relative; bottom: 3vh;  height: calc(20vh - 100vh *{{neg}}" >
+                <p>{{neg}}</p>
+        </div></div></div></div>
+        
+
+
+                
+
+            
+
+    <script>
+
+            var http;
+            var _img = document.getElementById('skullcloud');
+
+            var slider = document.getElementById("myRange");
+            var wordcloud = document.getElementsByClassName("wordcloud")
+            wordcloud.alt = slider.value;
+
+            slider.oninput = function() {
+                console.log(slider.value);
+                
+            
+          
+
+                slider.onchange = function() {
+                    console.log(slider.value);
+                    console.log("test")
+                    window.location.replace(`/update=${slider.value}`)}};
+                    _img.src = `../static/images/${slider.value}cloud.png`; 
+                  
+                    
+
+
+
+
+
+
+            </script>
+
+</body>
+</html>
+
